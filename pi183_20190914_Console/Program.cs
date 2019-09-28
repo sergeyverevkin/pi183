@@ -1,5 +1,7 @@
 ﻿#region usings
 using System;
+using System.Collections;
+using System.Collections.Generic;
 #endregion
 
 namespace pi183_20190914_Console
@@ -13,14 +15,81 @@ namespace pi183_20190914_Console
     /// Метод - единая точка входа в приложение
     /// </summary>
     /// <param name="args">входные параметры командной строки</param>
-    private static void Main(String[] args)
+    private static void Main(string[] args)
     {
       #region console
       h_PrintString();
       #endregion
 
-      h_ControlStructures();
+      // h_ControlStructures();
 
+      // h_DemoStaticArrays();
+      // h_DemoDynamicArrayList();
+      h_DemoList()
+    }
+
+    private static void h_DemoList()
+    {
+      // 3# типизированные динамические массивы
+      List<int> arList = new List<int>();
+      arList.Add(1);
+      arList.Add(2);
+      arList.Add(56);
+
+      int iSum = 0;
+      for (int ii = 0; ii < arList.Count; ii++) {
+        int iValue = arList[ii];
+        iSum += iValue;
+      }
+      double dAvg = iSum / arList.Count;
+      Console.WriteLine(dAvg);
+    }
+
+    private static void h_DemoDynamicArrayList()
+    {
+      // 2# Динамический нетипизированный массив
+      ArrayList arList;
+      arList = new ArrayList();
+      arList.Add(1);
+      arList.Add(2);
+      arList.Insert(0, 10);
+      arList.RemoveAt(0);
+      arList.Add("55)");
+      arList.Add(56);
+      arList.Remove("55)");
+
+      int iSum = 0;
+      int iCount = 0;
+      for(int ii=0;ii<arList.Count;ii++) {
+        if (!(arList[ii] is int)) {
+          continue;
+        }
+        int iValue = (int)arList[ii];
+        iSum += iValue;
+        iCount++;
+      }
+      double dAvg = iSum / iCount;
+      Console.WriteLine(dAvg);
+    }
+
+    private static void h_DemoStaticArrays()
+    {
+      // #1. статические массивы
+      int[] arInts1 =
+        new int[] { 1, 2, 3, 45 };
+      int[] arInts2 =
+        new int[4] { 1, 2, 3, 45 };
+      int[] arInts3 = 
+        new int[4];
+      // [0; n-1]
+      for(
+        int ii = 0; 
+        ii < arInts1.Length; 
+        ii++) {
+        Console.WriteLine(arInts1[ii]);
+      }
+
+      // Console.WriteLine(default(int));
     }
 
     private static int h_ControlStructures()
@@ -76,10 +145,10 @@ namespace pi183_20190914_Console
       int iCount = 10;
       int jj = 0;
       for (
-        int ii = 0;   // init
-        ii < iCount;  // check condition
-        ii++          // after action
-      ) {
+        int ii = 0;   // 1# init
+        ii < iCount;  // 2# check condition
+        ii++          // 3# after action
+      ) { // 4#
         Console.WriteLine(jj++);
       }
 
@@ -105,22 +174,29 @@ namespace pi183_20190914_Console
       while(jj < 10) {
         Console.WriteLine(jj++);
       }
+
+      jj = 0;
+      do {
+        Console.WriteLine(jj++);
+      }
+      while (jj < 10);
+
       #endregion
-      /*
-       Задание: 
-        Запрос нажатия клавиши
-        Зафиксировать время1 нажатия на клавишу
-        Запрос нажатия клавиши
-        Зафиксировать время2 нажатия на клавишу
-        Если секунды время1 % 10 == секунды время2 % 10, 
-          то поздравить пользователя
-        Запрос нажатия клавиши
-        
-        https://github.com/sergeyverevkin/pi183
-       */
+        /*
+         Задание: 
+          Запрос нажатия клавиши
+          Зафиксировать время1 нажатия на клавишу
+          Запрос нажатия клавиши
+          Зафиксировать время2 нажатия на клавишу
+          Если секунды время1 % 10 == секунды время2 % 10, 
+            то поздравить пользователя
+          Запрос нажатия клавиши
+
+          https://github.com/sergeyverevkin/pi183
+         */
 
 
-      return 0;
+        return 0;
     }
 
     /// <summary>
