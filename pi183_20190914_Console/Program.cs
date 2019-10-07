@@ -25,7 +25,57 @@ namespace pi183_20190914_Console
 
       // h_DemoStaticArrays();
       // h_DemoDynamicArrayList();
-      h_DemoList()
+      // h_DemoList();
+      h_DemoDictionary();
+
+      Console.ReadKey();
+    }
+
+    private static void h_DemoDictionary()
+    {
+      Dictionary<
+        /*TKey:*/ string,
+        /*TValue:*/ string>
+        arDictionary =
+        new Dictionary<string, string>();
+
+      arDictionary["this"] = "это";
+      arDictionary["that"] = "то";
+      arDictionary["those"] = "те";
+      arDictionary["these"] = "эти";
+
+      string sText = "These objectives are important to those persons";
+      string[] arText =
+        sText.Split(
+          new[] { ',', '.', ' ', ';' },
+          StringSplitOptions.RemoveEmptyEntries);
+      for (int ii = 0; ii < arText.Length; ii++) {
+        string sOutWord = arText[ii];
+        string sLowerWord = sOutWord.ToLower();
+        if (arDictionary.ContainsKey(sLowerWord)) {
+          sOutWord = arDictionary[sLowerWord];
+        }
+        Console.Write(sOutWord + " ");
+      }
+
+      Dictionary<int, int> arDictionary2 =
+        new Dictionary<int, int>();
+      for (int ii = 1; ii <= 10; ii++) {
+        arDictionary2[ii] = 100;
+        // arDictionary2[ii] = 200;
+        arDictionary2.Add(ii * 10, 100);
+      }
+      // arDictionary2.Clear();
+      // arDictionary2.Remove(20);
+
+
+      Dictionary<int, int>.KeyCollection arKeys =
+        arDictionary2.Keys;
+      // arDictionary2.Values
+      foreach (int ii in arKeys) {
+        Console.WriteLine(arDictionary2[ii]);
+      }
+
     }
 
     private static void h_DemoList()
@@ -60,7 +110,7 @@ namespace pi183_20190914_Console
 
       int iSum = 0;
       int iCount = 0;
-      for(int ii=0;ii<arList.Count;ii++) {
+      for (int ii = 0; ii < arList.Count; ii++) {
         if (!(arList[ii] is int)) {
           continue;
         }
@@ -79,12 +129,12 @@ namespace pi183_20190914_Console
         new int[] { 1, 2, 3, 45 };
       int[] arInts2 =
         new int[4] { 1, 2, 3, 45 };
-      int[] arInts3 = 
+      int[] arInts3 =
         new int[4];
       // [0; n-1]
-      for(
-        int ii = 0; 
-        ii < arInts1.Length; 
+      for (
+        int ii = 0;
+        ii < arInts1.Length;
         ii++) {
         Console.WriteLine(arInts1[ii]);
       }
@@ -171,7 +221,7 @@ namespace pi183_20190914_Console
 
       #region while
       jj = 0;
-      while(jj < 10) {
+      while (jj < 10) {
         Console.WriteLine(jj++);
       }
 
@@ -182,21 +232,21 @@ namespace pi183_20190914_Console
       while (jj < 10);
 
       #endregion
-        /*
-         Задание: 
-          Запрос нажатия клавиши
-          Зафиксировать время1 нажатия на клавишу
-          Запрос нажатия клавиши
-          Зафиксировать время2 нажатия на клавишу
-          Если секунды время1 % 10 == секунды время2 % 10, 
-            то поздравить пользователя
-          Запрос нажатия клавиши
+      /*
+       Задание: 
+        Запрос нажатия клавиши
+        Зафиксировать время1 нажатия на клавишу
+        Запрос нажатия клавиши
+        Зафиксировать время2 нажатия на клавишу
+        Если секунды время1 % 10 == секунды время2 % 10, 
+          то поздравить пользователя
+        Запрос нажатия клавиши
 
-          https://github.com/sergeyverevkin/pi183
-         */
+        https://github.com/sergeyverevkin/pi183
+       */
 
 
-        return 0;
+      return 0;
     }
 
     /// <summary>
