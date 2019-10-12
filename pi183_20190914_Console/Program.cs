@@ -26,9 +26,16 @@ namespace pi183_20190914_Console
       // h_DemoStaticArrays();
       // h_DemoDynamicArrayList();
       // h_DemoList();
-      h_DemoDictionary();
+      // h_DemoDictionary();
+
+      h_DemoWordsDictionary();
 
       Console.ReadKey();
+    }
+
+    private static void h_DemoWordsDictionary()
+    {
+      
     }
 
     private static void h_DemoDictionary()
