@@ -35,8 +35,93 @@ namespace pi183_20190914_Console
 
     private static void h_DemoWordsDictionary()
     {
-      
+      // найдем количество слов, где одинаковое количество гласных и согласных букв
+
+      string sText = "These objectives are important to those 189981 persons ";
+      string[] arText =
+        sText.Split(
+          new[] { ',', '.', ' ', ';' },
+          StringSplitOptions.RemoveEmptyEntries);
+
+      #region palindromes
+
+      List<string> arPalindromes = new List<string>();
+
+      foreach (string sWord in arText) {
+        string sWordToCheck = sWord
+          .ToLowerInvariant()
+          .Trim();
+        // if (h_DemoWordsDictionaryCondition(sWordToCheck)) {
+        if (h_DemoWordsPalindrome(sWordToCheck)) {
+          arPalindromes.Add(sWord);
+        }
+      }
+      foreach (string sWord in arPalindromes) {
+        Console.WriteLine(sWord);
+      }
+      #endregion
+
+
+
+      #region conditional search
+      int iCount2 = 0;
+      foreach (string sWord in arText) {
+        string sWordToCheck = sWord
+          .ToLowerInvariant()
+          .Trim();
+        if (h_DemoWordsDictionaryCondition(sWordToCheck)) {
+          iCount2++;
+        }
+      }
+      Console.WriteLine(iCount2);
+      #endregion
+
     }
+
+    private static bool h_DemoWordsPalindrome(string sWordToCheck)
+    {
+      // разбор посимвольно слова через обращение по индексу
+      int iLen = sWordToCheck.Length;
+      for (int ii = 0; ii < (int) iLen / 2; ii++) {
+        char chF = sWordToCheck[ii];
+        char chL = sWordToCheck[iLen - ii - 1];
+        if (chF != chL) return false;
+      }
+      return true;
+    }
+
+    private static bool
+      h_DemoWordsDictionaryCondition(
+        string sWord
+      )
+    {
+      // гласные
+      string sVowel = "eyuioa";
+      // согласные
+      string sConsonants = "qwrtpsdfghjklzxcvbnm";
+      int iVowelCount = 0;
+      int iConsonantsCount = 0;
+      int iUnknownCount = 0;
+
+      // разбор посимвольно слова через foreach
+      foreach (char ch in sWord) {
+        string sChar = ch.ToString();
+
+        if (sVowel.Contains(sChar)) {
+          iVowelCount++;
+        }
+        else
+        if (sConsonants.Contains(sChar)) {
+          iConsonantsCount++;
+        }
+        else {
+          iUnknownCount++;
+        }
+      }
+
+      return (iVowelCount == iConsonantsCount);
+    }
+
 
     private static void h_DemoDictionary()
     {
