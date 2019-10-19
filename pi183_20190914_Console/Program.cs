@@ -2,6 +2,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 #endregion
 
 namespace pi183_20190914_Console
@@ -27,10 +29,83 @@ namespace pi183_20190914_Console
       // h_DemoDynamicArrayList();
       // h_DemoList();
       // h_DemoDictionary();
+      // h_DemoWordsDictionary();
 
-      h_DemoWordsDictionary();
+      // h_DemoSpeedArrays();
+      // h_DemoSpeedHashSet();
+
+      h_DemoStrings();
 
       Console.ReadKey();
+    }
+
+    private static void h_DemoStrings()
+    {
+      Encoding enc1251 = Encoding.GetEncoding(1251);
+      string sT = "Русская строка";
+      string sDir = @"d:\1\";
+
+      File.WriteAllText(@"D:\1\1-asis.txt", sT);
+      File.WriteAllText(@"D:\1\2-1251.txt", sT, enc1251);
+      File.WriteAllText(@"D:\1\3-ascii.txt", sT, Encoding.ASCII);
+      File.WriteAllText(@"D:\1\4-utf8.txt", sT, Encoding.UTF8);
+
+      string[] ar = Directory.GetFiles(sDir, "*.txt", SearchOption.AllDirectories);
+      foreach(string sFn in ar) {
+        string s1 = File.ReadAllText(sFn);
+        string s2 = File.ReadAllText(sFn, enc1251);
+        string s3 = File.ReadAllText(sFn, Encoding.ASCII);
+        string s4 = File.ReadAllText(sFn, Encoding.UTF8);
+      }
+    }
+
+    private static void h_DemoSpeedArrays()
+    {
+      const int Length = 100000;
+      const int SeekCount = 10000;
+
+      DateTime dtFrom = DateTime.Now;
+      // заполняем массив
+      int[] ar = new int[Length];
+      for(int ii=0;ii<Length;ii++) {
+        ar[ii] = ii;
+      }
+
+      // поиск элементов
+      for (int ii = 0; ii < SeekCount; ii++) {
+        int iSeekNumber = ii;
+        for (int jj = 0; jj < ar.Length; jj++) {
+          if (ar[jj] == iSeekNumber) continue;
+        }
+      }
+
+      DateTime dtTo = DateTime.Now;
+      Console.WriteLine($"Array: {dtTo - dtFrom}");
+    }
+
+    private static void h_DemoSpeedHashSet()
+    {
+      const int Length = 100000 * 100;
+      const int SeekCount = 10000 * 10000;
+
+      DateTime dtFrom = DateTime.Now;
+      // заполняем массив
+      // HashSet<int> ~ Dictionary<int, bool>
+      HashSet<int> ar = new HashSet<int>();
+      for (int ii = 0; ii < Length; ii++) {
+        ar.Add(ii);
+      }
+
+      // поиск элементов
+      for (int ii = 0; ii < SeekCount; ii++) {
+        int iSeekNumber = ii;
+        if (ar.Contains(iSeekNumber)) {
+          // ar.Remove(iSeekNumber);
+        }
+      }
+      
+      DateTime dtTo = DateTime.Now;
+      Console.WriteLine($"HashSet: {dtTo - dtFrom}");
     }
 
     private static void h_DemoWordsDictionary()
