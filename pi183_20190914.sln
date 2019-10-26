@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pi183_20190914_Console", "p
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pi183_20190914_WinForms", "pi183_20190914_WinForms\pi183_20190914_WinForms.csproj", "{FF597902-E797-498A-91FF-E440FF9D5E3B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pi183_20190914_Classes", "pi183_20190914_Classes\pi183_20190914_Classes.csproj", "{C2B43207-0066-4759-89EF-D717EF59A1C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FF597902-E797-498A-91FF-E440FF9D5E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF597902-E797-498A-91FF-E440FF9D5E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF597902-E797-498A-91FF-E440FF9D5E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B43207-0066-4759-89EF-D717EF59A1C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B43207-0066-4759-89EF-D717EF59A1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B43207-0066-4759-89EF-D717EF59A1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B43207-0066-4759-89EF-D717EF59A1C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
 ﻿#region usings
+using pi183_20190914_Classes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -34,9 +35,57 @@ namespace pi183_20190914_Console
       // h_DemoSpeedArrays();
       // h_DemoSpeedHashSet();
 
-      h_DemoStrings();
+      // h_DemoStrings();
+
+      /*
+       Телефонная книга и контакты
+
+       Телефонная книга
+        - идентификатор владельца
+        - тип телефонной книги 
+            (мобильный / книга / тетрадь)
+        - контакт[]
+        
+       Контакт
+        - № телефона;
+        - название;
+        - дата рождения.
+
+       */
+      h_DemoClasses();
+
+      /*
+       Дополнительное задание к ЛР №1
+       Минимум:
+        System.IO.File.ReadAllText();
+        System.IO.File.WriteAllText();
+       Желательно:
+        посмотреть разные способы работы с файлами
+       */
 
       Console.ReadKey();
+    }
+
+    private static void h_DemoClasses()
+    {
+      // 1. Создадим адресную книгу (тетрадь)
+      AddressBook pBook1 = new AddressBook(
+        "mine", 1);
+      // 2. Заполним ее
+      Contact pContact1 = new Contact(
+        "+79130001234", "Мой первый номер");
+      Contact pContact2 = new Contact(
+        "+79130004231", "Мой второй номер");
+      pBook1.ContactList.Add(pContact1);
+      pBook1.ContactList.Add(pContact2);
+      // 3. Создадим адресную книгу (телефон)
+      AddressBook pBook2 = new AddressBook(
+        "mine", 2);
+      // 4. Скопируем в "телефон" контакты из "тетради"
+      foreach (Contact pContact in pBook1.ContactList) {
+        pBook2.ContactList.Add(pContact);
+      }
+
     }
 
     private static void h_DemoStrings()
@@ -51,7 +100,7 @@ namespace pi183_20190914_Console
       File.WriteAllText(@"D:\1\4-utf8.txt", sT, Encoding.UTF8);
 
       string[] ar = Directory.GetFiles(sDir, "*.txt", SearchOption.AllDirectories);
-      foreach(string sFn in ar) {
+      foreach (string sFn in ar) {
         string s1 = File.ReadAllText(sFn);
         string s2 = File.ReadAllText(sFn, enc1251);
         string s3 = File.ReadAllText(sFn, Encoding.ASCII);
@@ -67,7 +116,7 @@ namespace pi183_20190914_Console
       DateTime dtFrom = DateTime.Now;
       // заполняем массив
       int[] ar = new int[Length];
-      for(int ii=0;ii<Length;ii++) {
+      for (int ii = 0; ii < Length; ii++) {
         ar[ii] = ii;
       }
 
@@ -75,7 +124,9 @@ namespace pi183_20190914_Console
       for (int ii = 0; ii < SeekCount; ii++) {
         int iSeekNumber = ii;
         for (int jj = 0; jj < ar.Length; jj++) {
-          if (ar[jj] == iSeekNumber) continue;
+          if (ar[jj] == iSeekNumber) {
+            continue;
+          }
         }
       }
 
@@ -103,7 +154,7 @@ namespace pi183_20190914_Console
           // ar.Remove(iSeekNumber);
         }
       }
-      
+
       DateTime dtTo = DateTime.Now;
       Console.WriteLine($"HashSet: {dtTo - dtFrom}");
     }
@@ -157,10 +208,12 @@ namespace pi183_20190914_Console
     {
       // разбор посимвольно слова через обращение по индексу
       int iLen = sWordToCheck.Length;
-      for (int ii = 0; ii < (int) iLen / 2; ii++) {
+      for (int ii = 0; ii < (int)iLen / 2; ii++) {
         char chF = sWordToCheck[ii];
         char chL = sWordToCheck[iLen - ii - 1];
-        if (chF != chL) return false;
+        if (chF != chL) {
+          return false;
+        }
       }
       return true;
     }
