@@ -61,6 +61,17 @@ namespace pi183_20190914_Console
         System.IO.File.WriteAllText();
        Желательно:
         посмотреть разные способы работы с файлами
+
+      // 1. из входной строки записать в файл 
+      // только те символы, которые есть в заданном массиве (например, цифры)
+      // 2. при посимвольном считывании из файла подсчитать 
+      // количество повторяющихся символов, если 
+      // какой-то символ встречается более 3 раз,
+      // прекратить считывание.
+      // 3. вывести на экран символ, встретившийся
+      // более 3 раз.
+
+
        */
 
       Console.ReadKey();
@@ -69,15 +80,7 @@ namespace pi183_20190914_Console
     private static void h_DemoClasses()
     {
       // 1. Создадим адресную книгу (тетрадь)
-      AddressBook pBook1 = new AddressBook(
-        "mine", 1);
-      // 2. Заполним ее
-      Contact pContact1 = new Contact(
-        "+79130001234", "Мой первый номер");
-      Contact pContact2 = new Contact(
-        "+79130004231", "Мой второй номер");
-      pBook1.ContactList.Add(pContact1);
-      pBook1.ContactList.Add(pContact2);
+      AddressBook pBook1 = new TestAddressBook();
       // 3. Создадим адресную книгу (телефон)
       AddressBook pBook2 = new AddressBook(
         "mine", 2);

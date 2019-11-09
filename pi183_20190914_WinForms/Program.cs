@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace pi183_20190914
+namespace pi183_20190914_WinForms
 {
   static class Program
   {
