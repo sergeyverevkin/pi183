@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace pi183_20190914_Classes
+namespace pi183_20190914_Classes.AddressBook
 {
   /// <summary>
   /// Адресная книга

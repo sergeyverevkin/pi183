@@ -41,9 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddressBook.cs" />
-    <Compile Include="TestAddressBook.cs" />
-    <Compile Include="Contact.cs" />
+    <Compile Include="AddressBook\AddressBook.cs" />
+    <Compile Include="AddressBook\TestAddressBook.cs" />
+    <Compile Include="AddressBook\Contact.cs" />
+    <Compile Include="PlayCard\CardGame.cs" />
+    <Compile Include="PlayCard\Card.cs" />
+    <Compile Include="PlayCard\TableCardBatch.cs" />
+    <Compile Include="PlayCard\SimpleCardBatch.cs" />
+    <Compile Include="PlayCard\CardBatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

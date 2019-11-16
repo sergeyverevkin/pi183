@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace pi183_20190914_Classes
+namespace pi183_20190914_Classes.AddressBook
 {
   /// <summary>
   /// Контакт адресной книги
