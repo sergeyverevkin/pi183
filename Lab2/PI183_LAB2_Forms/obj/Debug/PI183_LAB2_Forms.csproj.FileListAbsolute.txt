@@ -1,0 +1,9 @@
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\bin\Debug\PI183_LAB2_Forms.exe.config
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\bin\Debug\PI183_LAB2_Forms.exe
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\bin\Debug\PI183_LAB2_Forms.pdb
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.csprojAssemblyReference.cache
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.Properties.Resources.resources
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.csproj.GenerateResource.cache
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.exe
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.pdb
