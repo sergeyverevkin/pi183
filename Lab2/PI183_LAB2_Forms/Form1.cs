@@ -20,8 +20,8 @@ namespace PI183_LAB2_Forms
 
     private void button1_Click(object sender, EventArgs e)
     {
-      Drink pD1 = new Drink("Молоко", 1);
-      Drink pD2 = new Drink("Кефир", 3);
+      Drink pD1 = new Drink("Молоко", EDrinkType.ForKid);
+      Drink pD2 = new Drink("Кефир", EDrinkType.Alcoholic);
       h_WriteInfoAboutDrink(pD1, label1);
       h_WriteInfoAboutDrink(pD2, label2);
 

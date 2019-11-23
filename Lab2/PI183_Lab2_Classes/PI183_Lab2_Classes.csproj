@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DrinkRef\Drink.cs" />
+    <Compile Include="DrinkRef\EDrinkType.cs" />
     <Compile Include="DrinkRef\Ingridient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

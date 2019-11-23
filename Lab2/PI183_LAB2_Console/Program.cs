@@ -7,8 +7,8 @@ namespace PI183_LAB2_Console
   {
     static void Main(string[] args)
     {
-      Drink pD1 = new Drink("Молоко", 1);
-      Drink pD2 = new Drink("Кефир", 3);
+      Drink pD1 = new Drink("Молоко", EDrinkType.ForKid);
+      Drink pD2 = new Drink("Кефир", EDrinkType.Alcoholic);
       h_WriteInfoAboutDrink(pD1);
       h_WriteInfoAboutDrink(pD2);
     }

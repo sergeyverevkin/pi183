@@ -21,14 +21,14 @@ namespace PI183_Lab2_Classes.DrinkRef
     /// <summary>
     /// Тип(1 = детский/ 2 = безалкогольный/ 3 = алкогольный)
     /// </summary>
-    public int DrinkType { get; set; }
+    public EDrinkType DrinkType { get; set; }
 
     #endregion
 
 
     #region constructors
 
-    public Drink(string title, int drinkType)
+    public Drink(string title, EDrinkType drinkType)
     {
       Title = title;
       DrinkType = drinkType;
@@ -36,6 +36,8 @@ namespace PI183_Lab2_Classes.DrinkRef
     }
     
     #endregion
+
+
 
     /// <summary>
     /// Есть ли заданный ингридент в напитке
@@ -56,4 +58,5 @@ namespace PI183_Lab2_Classes.DrinkRef
     }
 
   }
+
 }

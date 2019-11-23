@@ -1,0 +1,6 @@
+C:\Users\user\source\repos\pi183\Lab2\PI183_Lab2_Classes\bin\Debug\PI183_Lab2_Classes.dll
+C:\Users\user\source\repos\pi183\Lab2\PI183_Lab2_Classes\bin\Debug\PI183_Lab2_Classes.pdb
+C:\Users\user\source\repos\pi183\Lab2\PI183_Lab2_Classes\obj\Debug\PI183_Lab2_Classes.csprojAssemblyReference.cache
+C:\Users\user\source\repos\pi183\Lab2\PI183_Lab2_Classes\obj\Debug\PI183_Lab2_Classes.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\pi183\Lab2\PI183_Lab2_Classes\obj\Debug\PI183_Lab2_Classes.dll
+C:\Users\user\source\repos\pi183\Lab2\PI183_Lab2_Classes\obj\Debug\PI183_Lab2_Classes.pdb
