@@ -25,6 +25,20 @@ namespace PI183_LAB2_Forms
       h_WriteInfoAboutDrink(pD1, label1);
       h_WriteInfoAboutDrink(pD2, label2);
 
+
+      using (BlockForm pForm = new BlockForm())
+      {
+        DialogResult pDr = pForm.ShowDialog();
+        switch (pDr)
+        {
+          case DialogResult.None:
+            break;
+          case DialogResult.OK:
+            break;
+          case DialogResult.Cancel:
+            break;
+        }
+      }
     }
 
     private void h_WriteInfoAboutDrink(Drink pD1, Label lab)
