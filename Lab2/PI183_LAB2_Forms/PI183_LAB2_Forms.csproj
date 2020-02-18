@@ -58,6 +58,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCrosswordFighter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCrosswordFighter.Designer.cs">
+      <DependentUpon>FormCrosswordFighter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCrosswordEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCrosswordEditor.Designer.cs">
+      <DependentUpon>FormCrosswordEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BlockForm.resx">
@@ -65,6 +77,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCrosswordFighter.resx">
+      <DependentUpon>FormCrosswordFighter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCrosswordEditor.resx">
+      <DependentUpon>FormCrosswordEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -41,12 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crossword\CrosswordFight.cs" />
+    <Compile Include="Crossword\Schema.cs" />
     <Compile Include="DrinkRef\Drink.cs" />
     <Compile Include="DrinkRef\EDrinkType.cs" />
     <Compile Include="DrinkRef\Ingridient.cs" />
+    <Compile Include="Crossword\Field.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Crossword\Description.txt" />
     <Content Include="DrinkRef\Description.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

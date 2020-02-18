@@ -7,3 +7,10 @@ C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Form
 C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.exe
 C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.pdb
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\bin\Debug\PI183_Lab2_Classes.dll
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\bin\Debug\PI183_Lab2_Classes.pdb
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.BlockForm.resources
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.Form1.resources
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.csproj.CopyComplete
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.FormCrosswordEditor.resources
+C:\Users\user\source\repos\pi183\Lab2\PI183_LAB2_Forms\obj\Debug\PI183_LAB2_Forms.FormCrosswordFighter.resources
